@@ -1,5 +1,7 @@
 package services.impl;
 
+import acl.DemandsACLRepository;
+import acl.ProductionOutputACLRepository;
 import dao.DemandDao;
 import dao.ProductionDao;
 import entities.*;
@@ -8,8 +10,6 @@ import external.CurrentStock;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
-import shortages.prediction.DemandsRepository;
-import shortages.prediction.ProductionOutputRepository;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -29,9 +29,9 @@ public class ShortageFinderTest {
 
     private final DemandDao demands = Mockito.mock(DemandDao.class);
     private final ProductionDao productions = Mockito.mock(ProductionDao.class);
-    private final ShortageFinder subject = new ShortageFinder(
-            new DemandsRepository(demands),
-            new ProductionOutputRepository(productions)
+    private final services.impl.ShortageFinderACL subject = new services.impl.ShortageFinderACL(
+            new DemandsACLRepository(demands),
+            new ProductionOutputACLRepository(productions)
     );
 
     @Test

@@ -19,7 +19,7 @@ public class WarehouseServiceImpl implements WarehouseService {
     //Inject all
     private ShortageDao shortageDao;
     private StockService stockService;
-    private ShortageFinder shortageFinder;
+    private ShortageFinderACL shortageFinder;
 
     private NotificationsService notificationService;
     private JiraService jiraService;

@@ -18,7 +18,7 @@ public class QualityServiceImpl implements QualityService {
     //Inject all
     private ShortageDao shortageDao;
     private StockService stockService;
-    private ShortageFinder shortageFinder;
+    private ShortageFinderACL shortageFinder;
 
     private NotificationsService notificationService;
     private JiraService jiraService;

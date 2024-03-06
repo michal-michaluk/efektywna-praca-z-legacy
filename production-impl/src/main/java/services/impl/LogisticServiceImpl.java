@@ -24,7 +24,7 @@ public class LogisticServiceImpl implements LogisticService {
     private DemandDao demandDao;
     private ShortageDao shortageDao;
     private StockService stockService;
-    private ShortageFinder shortageFinder;
+    private services.impl.ShortageFinderACL shortageFinder;
 
     private NotificationsService notificationService;
     private JiraService jiraService;

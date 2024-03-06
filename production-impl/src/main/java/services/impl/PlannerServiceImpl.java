@@ -31,7 +31,7 @@ public class PlannerServiceImpl implements PlannerService {
     private FormDao formDao;
     private ShortageDao shortageDao;
     private StockService stockService;
-    private ShortageFinder shortageFinder;
+    private ShortageFinderACL shortageFinder;
 
 
     private NotificationsService notificationService;
